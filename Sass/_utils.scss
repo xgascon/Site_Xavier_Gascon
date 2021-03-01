@@ -1,0 +1,181 @@
+$color-site-1: #f8f1e5;
+$color-site-2: #426e86;
+$color-site-3: #2f3131;
+$color-site-4: #f9ba32;
+$color-site-4-for-fill: str-slice(''+$color-site-4, 2, 7);
+
+$projet-all:(
+    1:(
+        image:url(../images/projet1.png),
+        content:"Visiter le site",
+    ),
+    2:(
+        image:url(../images/projet2.png),
+        content:"Visiter le site",
+    ),
+    3:(
+        image:url(../images/projet3.png),
+        content:"Visiter le site",
+    ),
+    4:(
+        image:url(../images/projet4.png),
+        content:"Visiter le site",
+    ),
+    5:(
+        image:url(../images/projet5.png),
+        content:"Repository Github pour télécharger l'application",
+    ),
+    6:(
+        image:url(../images/projet6.png),
+        content:"Repository Github pour télécharger l'application",
+    )
+);
+
+$projet-pro-all:(
+    1:(
+        image:url(../images/logo_Mandy.jpg),
+        content:"Visiter le site",
+    ),
+    2:(
+        image:url(../images/logo_jbarillet.png),
+        content:"Visiter le site",
+    )
+);
+
+@mixin flip-projet {
+    @each $number, $projet in $projet-all{
+        &-#{$number} {
+            &::before {
+                background: 
+                // linear-gradient(to right, $color-site-4 + a1, rgba(0,0,0,0), rgba(0,0,0,0),rgba(0,0,0,0), rgba(0,0,0,0), rgba(0,0,0,0)),
+                linear-gradient(to right,$color-site-3 + aa, $color-site-3 + aa),
+                map-get($projet, image), no-repeat;
+                background-size: 100%;
+                content: map-get($projet, content);
+            }
+            &::after {
+                background: 
+                map-get($projet, image), no-repeat;
+                background-size: 100%;
+            } 
+        }
+    }
+}
+
+@mixin flip-projet-pro {
+    @each $number, $projet-pro in $projet-pro-all{
+        &-#{$number} {
+            &::before {
+                background: 
+                // linear-gradient(to right, $color-site-4 + a1, rgba(0,0,0,0), rgba(0,0,0,0),rgba(0,0,0,0), rgba(0,0,0,0), rgba(0,0,0,0)),
+                linear-gradient(to right,$color-site-3 + aa, $color-site-3 + aa),
+                map-get($projet-pro, image), no-repeat;
+                background-size: 100%;
+                content: map-get($projet-pro, content);
+            }
+            &::after {
+                background: 
+                map-get($projet-pro, image), no-repeat;
+                background-size: 100%;
+            } 
+        }
+    }
+}
+
+// Valeurs de l'animation wriggle pour secouer
+
+$wriggle-power:1%;
+$wriggle-rotation:2deg;
+
+// Animation pour faire secouer les textes
+
+@keyframes wriggle {
+    0% {
+        transform: translateX($wriggle-power) translateY($wriggle-power*-2) rotate($wriggle-rotation);
+    }
+    33% {
+        transform: translateX($wriggle-power*-1) translateY($wriggle-power*2) rotate($wriggle-rotation*-1);
+    }
+    66% {
+        transform: translateX($wriggle-power) translateY($wriggle-power*2) rotate($wriggle-rotation);
+    }
+    100% {
+        transform: translateX($wriggle-power*-1) translateY($wriggle-power*-2) rotate($wriggle-rotation*-1);
+    }
+}
+
+// Animation pour effet visuel d'opacité 
+
+@keyframes apparition-bright {
+    0% {
+        opacity : 0.4;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes apparition-fadeout {
+    0% {
+        opacity : 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes apparition-bottom {
+    0% {
+        transform: translateY(100%);
+        opacity : 0.4;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes apparition-top {
+    0% {
+        transform: translateY(-100%);
+        opacity : 0.4;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes apparition-right {
+    0% {
+        transform: translateX(10%);
+        opacity : 0.4;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes apparition-left {
+    0% {
+        transform: translateX(-10%);
+        opacity : 0.4;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes apparition-scale {
+    0% {
+        transform: scale(0);
+        opacity : 0.0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+

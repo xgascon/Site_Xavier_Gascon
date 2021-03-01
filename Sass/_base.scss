@@ -1,0 +1,142 @@
+@font-face {
+    font-family: "Montserrat_bold";
+    src: url("../fonts/Montserrat/Montserrat-Bold.ttf");
+}
+
+@font-face {
+    font-family: "Montserrat";
+    src: url("../fonts/Montserrat/Montserrat-Regular.ttf");
+}
+
+@font-face {
+    font-family: "AlexBrush";
+    src: url("../fonts/AlexBrush/AlexBrush-Regular.ttf");
+}
+
+@font-face {
+    font-family: "Sina";
+    src: url("../fonts/Sina/SinaNovaReg-webfont.woff");
+}
+
+body {
+    font-family: "Montserrat";
+    font-size: 1.2em;
+    @media all and (max-width: 577px) {
+        font-size: 0.9em!important;
+    }
+}
+
+h2 {
+    @media all and (max-width: 577px) {
+        font-size: 1.2em;
+    }
+}
+
+h3 {
+    @media all and (max-width: 577px) {
+        font-size: 1.1em;
+    }
+}
+
+h4 {
+    @media all and (max-width: 577px) {
+        font-size: 0.9em;
+    }
+}
+
+.container {
+    max-width: 1500px;
+    margin: auto;
+    width: 100%;
+}
+
+.flex-items-center {
+    display: flex;
+    align-items: center;
+}
+
+.flex-items-baseline {
+    display: flex;
+    align-items: baseline!important;
+}
+
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.flex-items-start {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.flex-row {
+    display: flex;
+    flex-direction: row;
+}
+
+.flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.flex-column-reverse {
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.display-none-for-phone {
+    @media all and (max-width: 577px) {
+        display: none;
+    }
+}
+
+.display-none-for-largeScreens {
+    @media all and (min-width: 992px) {
+        display: none;
+    }
+}
+
+.display-none-for-mediumScreens {
+    @media all and (max-width: 992px) {
+        display: none;
+    }
+}
+
+a {
+    text-decoration: none;
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+.preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #fff;
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.preloader__img {
+    background: 
+    url(../images/logo2.png), no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 15em;
+    height: 10em;
+}
+
+.link-no-decoration {
+    text-decoration: none;
+    &::after {
+        display: none!important;
+    }
+}
