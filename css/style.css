@@ -595,7 +595,7 @@ h1 {
 @media all and (max-width: 577px) {
   .banner_meContacter {
     font-size: 0.7em;
-    left: -1%;
+    right: -0.5%;
   }
 }
 
