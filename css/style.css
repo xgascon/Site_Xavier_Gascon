@@ -585,8 +585,8 @@ h1 {
 
 .banner_meContacter {
   position: fixed;
-  top: 20%;
-  left: -0.5%;
+  bottom: 10%;
+  right: -0.5%;
   display: flex;
   background-color: #426e86;
   color: #f9ba32;
