@@ -3,12 +3,7 @@
     color: $color-site-1;
     background: 
     linear-gradient(150deg, $color-site-1, $color-site-2, $color-site-3)
-    // linear-gradient(100deg, rgba(254,202,7, 0.4), rgba(0,0,0,0.1), rgba(255,255,255,0.2)),
-    // rgb(254,202,7),
-    // rgba(0,0,0,1)
     ;
-    // text-shadow: black 0.1em 0.1em 0.2em;
-    // height: 35em;
     min-height: fit-content;
     z-index: 2;
 }
@@ -27,7 +22,6 @@
 .contact-button {   
     padding: .75rem 1.25rem;
     border-radius: 0rem;
-    // font-weight: bold;
     color: white;
     text-transform: uppercase;
     font-size: 0.8rem;
@@ -57,7 +51,6 @@
         right: 0;
         width: 0%;
         height: 100%;
-        // border: darken($color-site-4, 100%) 2px solid;
         transition: all .3s;
         border-radius: 0rem;
         z-index: -1;
@@ -75,24 +68,6 @@
 
 .border-left {
     border-left: solid 2px $color-site-4!important;
-}
-
-.yellow-underline {
-    $underline-color:yellow ;
-    padding-bottom: 0.2em;
-    text-decoration: none;
-    background-size: 0% 3px;
-    background-position: left bottom;
-    background-image: linear-gradient(to right, $underline-color 0%, $underline-color 100%);
-    background-repeat: no-repeat;
-    &--bg-size {
-        transition: background-size 1.3s ease-in-out;
-        background-size: 60% 3px;
-    }
-}
-
-.bg-center {
-    background-position: center bottom;
 }
 
 .banner_meContacter {
