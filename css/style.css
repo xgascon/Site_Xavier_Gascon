@@ -54,6 +54,10 @@ h1 {
   width: 100%;
 }
 
+.font-smaller {
+  font-size: smaller;
+}
+
 .flex-items-center {
   display: flex;
   align-items: center;
@@ -68,6 +72,11 @@ h1 {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.flex-items-end {
+  display: flex;
+  align-items: flex-end;
 }
 
 .flex-items-start {

@@ -55,6 +55,10 @@ h4 {
     width: 100%;
 }
 
+.font-smaller {
+    font-size: smaller;
+}
+
 .flex-items-center {
     display: flex;
     align-items: center;
@@ -69,6 +73,11 @@ h4 {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.flex-items-end {
+    display: flex;
+    align-items: flex-end;
 }
 
 .flex-items-start {
